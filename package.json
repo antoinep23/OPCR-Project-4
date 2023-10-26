@@ -1,0 +1,14 @@
+{
+  "name": "code_projet_4",
+  "version": "1.0.0",
+  "description": "Projet 4 : Améliorer l'interface d'un site mobile avec des animations CSS - OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}
