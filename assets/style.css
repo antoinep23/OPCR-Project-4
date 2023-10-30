@@ -104,6 +104,20 @@ header .header__location {
   width: 100%;
   border-radius: 0.94rem;
   background-color: white;
+  position: relative;
+}
+.listeResto .listeResto__nouveau {
+  position: absolute;
+  top: 4%;
+  left: 82%;
+  background-color: #99E2D0;
+  padding: 5px 8px;
+  border-radius: 3px;
+  color: #008766;
+  font-size: 10pt;
+}
+.listeResto .listeResto__location {
+  font-weight: 200;
 }
 .listeResto .listeResto__img {
   object-fit: cover;

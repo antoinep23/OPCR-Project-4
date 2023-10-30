@@ -2,6 +2,7 @@ $notif-color: #99E2D0;
 $list-color: #9356DC;
 $bg-grey: #F6F6F6;
 $footer-color: #353535;
+$green-font: #008766;
 
 @mixin center-content-mobile{
     display: flex;
@@ -125,6 +126,20 @@ header{
         width: 100%;
         border-radius: 0.94rem;
         background-color: white;
+        position: relative;
+    }
+    .listeResto__nouveau{
+        position: absolute;
+        top: 4%;
+        left: 82%;
+        background-color: $notif-color;
+        padding:5px 8px;
+        border-radius: 3px;
+        color: $green-font;
+        font-size: 10pt;
+    }
+    .listeResto__location{
+        font-weight: 200;
     }
     .listeResto__img{
         object-fit: cover;
