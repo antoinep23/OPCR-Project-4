@@ -105,11 +105,12 @@ header .header__location {
   border-radius: 0.94rem;
   background-color: white;
   position: relative;
+  text-decoration: none;
 }
 .listeResto .listeResto__nouveau {
   position: absolute;
   top: 4%;
-  left: 82%;
+  left: 75%;
   background-color: #99E2D0;
   padding: 5px 8px;
   border-radius: 3px;
@@ -135,6 +136,7 @@ header .header__location {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  color: black;
 }
 
 footer {
@@ -160,6 +162,77 @@ footer .footer__linkPartnerLogo {
   display: flex;
   gap: 0.8rem;
   align-items: center;
+}
+
+/********************* MENU *********************/
+.photoResto .photoResto--width {
+  width: 100%;
+}
+.photoResto .photoResto--width img {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px 25px 0 0;
+  background-color: #F6F6F6;
+  padding-bottom: 2rem;
+}
+.menu .menu__header {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+.menu .menu__header .menu__restaurant {
+  font-family: "Shrikhand", serif;
+}
+.menu .menu__bloc {
+  width: 90%;
+}
+.menu .menu__bloc .menu__title {
+  width: 2.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: solid 3px #99E2D0;
+}
+.menu .menu__bloc--column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 1rem 0 2rem 0;
+}
+.menu .menu__plat {
+  border-radius: 0.94019rem;
+  background: var(--White, #FFF);
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.menu .menu__plat .menu__platFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu .menu__plat .menu__platFooter .menu__description {
+  font-weight: lighter;
+}
+.menu .menu__button {
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 1.5rem;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 1rem 0;
+}
+.menu .menu__button a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
