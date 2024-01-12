@@ -19,6 +19,8 @@ $green-font: #008766;
     color: white;
     border: none;
     box-shadow: 0px 2px 6px grey;
+    cursor: pointer;
+    font-size: 12pt;
 }
 
 @mixin number{
@@ -206,6 +208,7 @@ footer{
         .header__img{
             grid-column: 2/3;
             grid-row: 1/1;
+            margin: auto;
         }
     }
 }
@@ -284,7 +287,7 @@ footer{
         }
     }
     .menu__button{
-        background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+        background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
         border-radius: 1.5rem;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         padding: 1rem 0;
@@ -296,3 +299,14 @@ footer{
     }
 }
    
+
+/********************* ANIMATIONS *********************/
+
+.exploration__CTA, .menu__button{
+    opacity: 1;
+    transition: all 350ms;
+    &:hover{
+        opacity: 0.85;
+        box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+}
