@@ -21,6 +21,10 @@ $green-font: #008766;
     box-shadow: 0px 2px 6px grey;
     cursor: pointer;
     font-size: 12pt;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin number{
@@ -114,6 +118,11 @@ header{
         .fonctionnement__todo{
             font-size: 14pt;
         }
+    }
+    .fonctionnement__step--row{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 }
 
@@ -308,5 +317,19 @@ footer{
     &:hover{
         opacity: 0.85;
         box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+
+
+
+/********************* MEDIA QUERIES *********************/
+
+@media screen and (min-width: 768px){
+    .fonctionnement{
+        .fonctionnement__step--row{
+            display: flex;
+            flex-direction: row;
+        }
     }
 }

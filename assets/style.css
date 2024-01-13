@@ -60,6 +60,10 @@ header .header__location {
   box-shadow: 0px 2px 6px grey;
   cursor: pointer;
   font-size: 12pt;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fonctionnement {
@@ -93,6 +97,11 @@ header .header__location {
 }
 .fonctionnement .fonctionnement__step .fonctionnement__todo {
   font-size: 14pt;
+}
+.fonctionnement .fonctionnement__step--row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .listeResto {
@@ -279,6 +288,14 @@ footer .footer__linkPartnerLogo {
 .exploration__CTA:hover, .menu__button:hover {
   opacity: 0.85;
   box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+/********************* MEDIA QUERIES *********************/
+@media screen and (min-width: 768px) {
+  .fonctionnement .fonctionnement__step--row {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
