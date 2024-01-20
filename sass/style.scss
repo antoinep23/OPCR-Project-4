@@ -133,17 +133,22 @@ header{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    .listeResto--responsive{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
     .listeResto__bloc{
         width: 100%;
         border-radius: 0.94rem;
         background-color: white;
-        position: relative;
         text-decoration: none;
+        position: relative;
     }
     .listeResto__nouveau{
         position: absolute;
-        top: 4%;
-        left: 75%;
+        top: 5%;
+        left: 80%;
         background-color: $notif-color;
         padding:5px 8px;
         border-radius: 3px;
@@ -346,12 +351,12 @@ footer{
     }
     .listeResto{
         padding: 4rem 10%;
-    }
-    .listeResto--grid{
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
+        .listeResto--responsive{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
     }
     footer{
         flex-direction: row-reverse;

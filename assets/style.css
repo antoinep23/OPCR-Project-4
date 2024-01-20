@@ -111,17 +111,22 @@ header .header__location {
   flex-direction: column;
   gap: 2rem;
 }
+.listeResto .listeResto--responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .listeResto .listeResto__bloc {
   width: 100%;
   border-radius: 0.94rem;
   background-color: white;
-  position: relative;
   text-decoration: none;
+  position: relative;
 }
 .listeResto .listeResto__nouveau {
   position: absolute;
-  top: 4%;
-  left: 75%;
+  top: 5%;
+  left: 80%;
   background-color: #99E2D0;
   padding: 5px 8px;
   border-radius: 3px;
@@ -313,7 +318,7 @@ footer .footer__linkPartnerLogo {
   .listeResto {
     padding: 4rem 10%;
   }
-  .listeResto--grid {
+  .listeResto .listeResto--responsive {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
