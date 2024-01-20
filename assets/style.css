@@ -168,8 +168,8 @@ footer .footer__linkLogo {
   gap: 0.4rem;
 }
 footer .footer__logo {
-  width: 10rem;
-  height: 4rem;
+  width: 8rem;
+  height: 3rem;
 }
 footer .footer__link {
   text-decoration: none;
@@ -322,6 +322,18 @@ footer .footer__linkPartnerLogo {
   footer {
     flex-direction: row-reverse;
     align-items: center;
+  }
+  footer .footer--responsive {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 3rem;
+  }
+  footer .footer__linkLogo {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 3rem;
   }
 }
 
