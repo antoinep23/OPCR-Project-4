@@ -21,6 +21,10 @@ $green-font: #008766;
     box-shadow: 0px 2px 6px grey;
     cursor: pointer;
     font-size: 12pt;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin number{
@@ -54,7 +58,7 @@ $green-font: #008766;
     padding: 0;
 }
 
-/* ---------------------------------- */
+/* --------------  INDEX  ----------------- */
 
 header{
     @include center-content-mobile();
@@ -115,6 +119,11 @@ header{
             font-size: 14pt;
         }
     }
+    .fonctionnement__step--row{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
 
 
@@ -124,17 +133,22 @@ header{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    .listeResto--responsive{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
     .listeResto__bloc{
         width: 100%;
         border-radius: 0.94rem;
         background-color: white;
-        position: relative;
         text-decoration: none;
+        position: relative;
     }
     .listeResto__nouveau{
         position: absolute;
-        top: 4%;
-        left: 75%;
+        top: 5%;
+        left: 80%;
         background-color: $notif-color;
         padding:5px 8px;
         border-radius: 3px;
@@ -171,9 +185,19 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    .footer--responsive{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    .footer__linkLogo{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
     .footer__logo{
-        width: 10rem;
-        height: 4rem;
+        width: 8rem;
+        height: 3rem;
     }
     .footer__link{
         text-decoration: none;
@@ -277,6 +301,7 @@ footer{
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
+        cursor: pointer;
         .menu__platFooter{
             display: flex;
             flex-direction: row;
@@ -308,5 +333,49 @@ footer{
     &:hover{
         opacity: 0.85;
         box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+
+
+
+/********************* MEDIA QUERIES *********************/
+
+@media screen and (min-width: 768px){
+    .fonctionnement{
+        padding: 4rem 10%;
+        .fonctionnement__step--row{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    .listeResto{
+        padding: 4rem 10%;
+        .listeResto--responsive{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
+    }
+    footer{
+        flex-direction: row-reverse;
+        align-items: center;
+        .footer--responsive{
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            margin-right: 3rem;
+        }
+        .footer__linkLogo{
+            flex-direction: row;
+            gap: 1rem;
+            align-items: center;
+            margin-right: 3rem;
+        }
+    }
+    .menu{
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
