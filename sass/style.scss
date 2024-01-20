@@ -58,7 +58,7 @@ $green-font: #008766;
     padding: 0;
 }
 
-/* ---------------------------------- */
+/* --------------  INDEX  ----------------- */
 
 header{
     @include center-content-mobile();
@@ -286,6 +286,7 @@ footer{
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
+        cursor: pointer;
         .menu__platFooter{
             display: flex;
             flex-direction: row;
@@ -327,9 +328,19 @@ footer{
 
 @media screen and (min-width: 768px){
     .fonctionnement{
+        padding: 4rem 10%;
         .fonctionnement__step--row{
             display: flex;
             flex-direction: row;
         }
+    }
+    .listeResto{
+        padding: 4rem 10%;
+    }
+    .listeResto--grid{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
     }
 }

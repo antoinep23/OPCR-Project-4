@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-/* ---------------------------------- */
+/* --------------  INDEX  ----------------- */
 header {
   display: flex;
   flex-direction: column;
@@ -259,6 +259,7 @@ footer .footer__linkPartnerLogo {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  cursor: pointer;
 }
 .menu .menu__plat .menu__platFooter {
   display: flex;
@@ -292,9 +293,21 @@ footer .footer__linkPartnerLogo {
 
 /********************* MEDIA QUERIES *********************/
 @media screen and (min-width: 768px) {
+  .fonctionnement {
+    padding: 4rem 10%;
+  }
   .fonctionnement .fonctionnement__step--row {
     display: flex;
     flex-direction: row;
+  }
+  .listeResto {
+    padding: 4rem 10%;
+  }
+  .listeResto--grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
   }
 }
 
