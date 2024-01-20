@@ -335,6 +335,10 @@ footer .footer__linkPartnerLogo {
     align-items: center;
     margin-right: 3rem;
   }
+  .menu {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
