@@ -180,6 +180,16 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    .footer--responsive{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    .footer__linkLogo{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
     .footer__logo{
         width: 10rem;
         height: 4rem;
@@ -342,5 +352,9 @@ footer{
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
+    }
+    footer{
+        flex-direction: row-reverse;
+        align-items: center;
     }
 }
