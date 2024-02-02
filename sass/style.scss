@@ -417,3 +417,18 @@ footer{
     }
 }
 
+
+
+@media screen and (max-width: 767px){
+    .menu__plat{
+        &::after{
+            width: 15%;
+            left: 85%;
+        }
+        &:hover{
+            .menu__prix{
+                margin-right: 15%; 
+            }
+        }
+    }
+}
