@@ -211,6 +211,7 @@ footer .footer__linkPartnerLogo {
 
 .photoResto {
   background-size: cover;
+  background-position-y: 60%;
   width: 100%;
   height: 20rem;
 }
