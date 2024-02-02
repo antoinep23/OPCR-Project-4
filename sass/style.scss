@@ -355,7 +355,7 @@ footer{
         background-color: $notif-color;
         border-radius: 0 0.94019rem 0.94019rem 0;
         transform-origin: 100% 50%;
-        transition: all 350ms;
+        transition:  350ms;
         transform: scaleX(0);
         position: absolute;
         left: 93%;
@@ -373,8 +373,18 @@ footer{
 }
 
 /* COEUR */
-
-
+.heart--animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/images/icon/heart.png);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    &:hover{
+        background-image: url(/assets/images/icon/heart-purple.png) ;
+    }
+}
 
 
 
