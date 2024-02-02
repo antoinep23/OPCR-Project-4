@@ -372,6 +372,10 @@ footer{
     }
 }
 
+/* COEUR */
+
+
+
 
 
 
@@ -414,11 +418,15 @@ footer{
     .menu{
         margin-left: 10%;
         margin-right: 10%;
+        .menu__header{
+            justify-content: center;
+            gap: 3%;
+        }
     }
 }
 
 
-
+/* Responsive animation */
 @media screen and (max-width: 767px){
     .menu__plat{
         &::after{

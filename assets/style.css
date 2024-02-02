@@ -338,6 +338,7 @@ footer .footer__linkPartnerLogo {
   margin-right: 7%;
 }
 
+/* COEUR */
 /********************* MEDIA QUERIES *********************/
 @media screen and (min-width: 768px) {
   .fonctionnement {
@@ -376,7 +377,12 @@ footer .footer__linkPartnerLogo {
     margin-left: 10%;
     margin-right: 10%;
   }
+  .menu .menu__header {
+    justify-content: center;
+    gap: 3%;
+  }
 }
+/* Responsive animation */
 @media screen and (max-width: 767px) {
   .menu__plat::after {
     width: 15%;
