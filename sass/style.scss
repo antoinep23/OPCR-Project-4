@@ -301,6 +301,7 @@ footer{
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
+        position: relative;
         cursor: pointer;
         .menu__platFooter{
             display: flex;
@@ -327,6 +328,7 @@ footer{
 
 /********************* ANIMATIONS *********************/
 
+/* HOVER CTA */
 .exploration__CTA, .menu__button{
     opacity: 1;
     transition: all 350ms;
@@ -335,6 +337,41 @@ footer{
         box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.35);
     }
 }
+
+/* CARTE AJOUTER */
+.menu__plat{
+    transition: all 500ms linear;
+    .menu__prix{
+        transition: all 500ms cubic-bezier(.07,.83,.73,.99);
+    }
+
+    &::after{
+        content: url(/assets/images/icon/check.png);
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        width: 7%;
+        height: 100%;
+        background-color: $notif-color;
+        border-radius: 0 0.94019rem 0.94019rem 0;
+        transform-origin: 100% 50%;
+        transition: all 350ms;
+        transform: scaleX(0);
+        position: absolute;
+        left: 93%;
+        top: 0%;
+    }
+
+    &:hover{
+        &::after{
+            transform: scaleX(1);
+        }
+        .menu__prix{
+            margin-right: 7%; 
+        }
+    }
+}
+
 
 
 
@@ -379,3 +416,4 @@ footer{
         margin-right: 10%;
     }
 }
+
