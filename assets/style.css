@@ -286,7 +286,9 @@ footer .footer__linkPartnerLogo {
 }
 .menu .menu__plat--entree .menu__platFooter .menu__description {
   font-weight: lighter;
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu .menu__plat--plat {
   border-radius: 0.94019rem;
@@ -306,7 +308,9 @@ footer .footer__linkPartnerLogo {
 }
 .menu .menu__plat--plat .menu__platFooter .menu__description {
   font-weight: lighter;
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu .menu__plat--dessert {
   border-radius: 0.94019rem;
@@ -326,7 +330,9 @@ footer .footer__linkPartnerLogo {
 }
 .menu .menu__plat--dessert .menu__platFooter .menu__description {
   font-weight: lighter;
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu .menu__button {
   background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);

@@ -68,7 +68,9 @@ $green-font: #008766;
             justify-content: space-between;
             .menu__description{
                 font-weight: lighter;
+                overflow: hidden;
                 text-overflow: ellipsis;
+                white-space: nowrap;
             }
         }
 }
@@ -318,13 +320,13 @@ footer{
         padding: 1rem 0 2rem 0;
     }
     .menu__plat--entree{
-        @include menu-plat
+        @include menu-plat;
     }
     .menu__plat--plat{
-        @include menu-plat
+        @include menu-plat;
     }
     .menu__plat--dessert{
-        @include menu-plat
+        @include menu-plat;
     }
     .menu__button{
         background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
