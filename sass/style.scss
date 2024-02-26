@@ -52,6 +52,26 @@ $green-font: #008766;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
+@mixin menu-plat {
+    border-radius: 0.94019rem;
+        background: var(--White, #FFF);
+        box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        position: relative;
+        cursor: pointer;
+        .menu__platFooter{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .menu__description{
+                font-weight: lighter;
+            }
+        }
+}
+
 
 
 *{
@@ -296,24 +316,14 @@ footer{
         gap: 15px;
         padding: 1rem 0 2rem 0;
     }
-    .menu__plat{
-        border-radius: 0.94019rem;
-        background: var(--White, #FFF);
-        box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
-        padding: 0.8rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
-        position: relative;
-        cursor: pointer;
-        .menu__platFooter{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            .menu__description{
-                font-weight: lighter;
-            }
-        }
+    .menu__plat--entree{
+        @include menu-plat
+    }
+    .menu__plat--plat{
+        @include menu-plat
+    }
+    .menu__plat--dessert{
+        @include menu-plat
     }
     .menu__button{
         background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -342,8 +352,7 @@ footer{
 }
 
 /* CARTE AJOUTER */
-.menu__plat{
-    transition: all 500ms linear;
+.menu__plat--entree, .menu__plat--plat, .menu__plat--dessert{
     .menu__prix{
         transition: all 500ms cubic-bezier(.07,.83,.73,.99);
     }
@@ -430,8 +439,7 @@ footer{
     }
     .loader--animation--bar{
         width: 50%;
-        height: 50px;
-        
+        height: 50px;   
         border-radius: 10px;
         background-color: $bg-grey;
         position: relative;
@@ -448,6 +456,32 @@ footer{
     }
 }
 
+
+/* ARRIVÉE PLATS */
+@keyframes plats {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.menu__plat--entree{
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    animation: plats 700ms ease-out forwards;
+}
+.menu__plat--plat{
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    animation: plats 1000ms ease-out forwards;
+}
+.menu__plat--dessert{
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    animation: plats 1300ms ease-out forwards;
+}
 
 
 
