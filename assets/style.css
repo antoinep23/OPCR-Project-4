@@ -286,6 +286,7 @@ footer .footer__linkPartnerLogo {
 }
 .menu .menu__plat--entree .menu__platFooter .menu__description {
   font-weight: lighter;
+  text-overflow: ellipsis;
 }
 .menu .menu__plat--plat {
   border-radius: 0.94019rem;
@@ -305,6 +306,7 @@ footer .footer__linkPartnerLogo {
 }
 .menu .menu__plat--plat .menu__platFooter .menu__description {
   font-weight: lighter;
+  text-overflow: ellipsis;
 }
 .menu .menu__plat--dessert {
   border-radius: 0.94019rem;
@@ -324,6 +326,7 @@ footer .footer__linkPartnerLogo {
 }
 .menu .menu__plat--dessert .menu__platFooter .menu__description {
   font-weight: lighter;
+  text-overflow: ellipsis;
 }
 .menu .menu__button {
   background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -517,11 +520,11 @@ footer .footer__linkPartnerLogo {
 }
 /* Responsive animation */
 @media screen and (max-width: 767px) {
-  .menu__plat::after {
+  .menu__plat--entree::after, .menu__plat--plat::after, .menu__plat--dessert::after {
     width: 15%;
     left: 85%;
   }
-  .menu__plat:hover .menu__prix {
+  .menu__plat--entree:hover .menu__prix, .menu__plat--plat:hover .menu__prix, .menu__plat--dessert:hover .menu__prix {
     margin-right: 15%;
   }
 }

@@ -68,6 +68,7 @@ $green-font: #008766;
             justify-content: space-between;
             .menu__description{
                 font-weight: lighter;
+                text-overflow: ellipsis;
             }
         }
 }
@@ -367,7 +368,7 @@ footer{
         background-color: $notif-color;
         border-radius: 0 0.94019rem 0.94019rem 0;
         transform-origin: 100% 50%;
-        transition:  350ms;
+        transition: 350ms;
         transform: scaleX(0);
         position: absolute;
         left: 93%;
@@ -533,7 +534,7 @@ footer{
 
 /* Responsive animation */
 @media screen and (max-width: 767px){
-    .menu__plat{
+    .menu__plat--entree, .menu__plat--plat, .menu__plat--dessert{
         &::after{
             width: 15%;
             left: 85%;
