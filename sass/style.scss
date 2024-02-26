@@ -52,6 +52,8 @@ $green-font: #008766;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
+
+
 *{
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -382,11 +384,69 @@ footer{
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
+    transition: all 200ms;
     &:hover{
         background-image: url(/assets/images/icon/heart-purple.png) ;
     }
 }
 
+/* LOADER */
+@keyframes loading {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes loading-end {
+    0% {
+        transform: scale(1);
+    }
+    99% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.loader--animation{
+    position: absolute;
+    width: 100%;
+    height: 250vh;
+    background: white;
+    z-index: 5;
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15rem;
+    gap: 2rem;
+    animation: loading-end 2.5s linear forwards;
+    .loader__title{
+        font-size: 22pt;
+    }
+    .loader--animation--bar{
+        width: 50%;
+        height: 50px;
+        
+        border-radius: 10px;
+        background-color: $bg-grey;
+        position: relative;
+    }
+    .loader--animation--progression{
+        transform: scaleX(0);
+        border-radius: 9px;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        background-color: $list-color;
+        transform-origin: 0% 50%;
+        animation: loading 2s ease-in-out forwards; 
+    }
+}
 
 
 
