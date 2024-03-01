@@ -4,11 +4,14 @@
   "description": "Projet 4 : Améliorer l'interface d'un site mobile avec des animations CSS - OhMyFood",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.69.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }

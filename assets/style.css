@@ -405,6 +405,8 @@ footer .footer__linkPartnerLogo {
   padding-top: 15rem;
   gap: 2rem;
   animation: loading-end 2.5s linear forwards;
+  /* HIDE ANIMATION */
+  display: none;
 }
 .loader--animation .loader__title {
   font-size: 22pt;
