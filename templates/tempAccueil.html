@@ -8,7 +8,343 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@200;300;500&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <link href="../assets/style.css" rel="stylesheet">
+    <style>
+        @charset "UTF-8";
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+}
+header .header__img {
+  width: 10rem;
+  height: 2rem;
+}
+header .header__logo {
+  padding: 1.5rem 0rem 1.5rem 0rem;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.15);
+}
+header .header__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 3rem;
+  font-size: 1rem;
+  color: #353535;
+  font-weight: 900;
+}
+
+.exploration {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+.exploration .exploration__paragraph {
+  font-weight: lighter;
+  font-size: 13pt;
+}
+.exploration .exploration__CTA {
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  border-radius: 1.56rem;
+  width: 13.6rem;
+  height: 3.1rem;
+  color: white;
+  border: none;
+  box-shadow: 0px 2px 6px grey;
+  cursor: pointer;
+  font-size: 12pt;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+.fonctionnement .fonctionnement__step {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1.25rem;
+  background-color: #F6F6F6;
+  width: 100%;
+  height: 4.8rem;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement .fonctionnement__step .fonctionnement__number {
+  background: #9356DC;
+  border-radius: 90px;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10px;
+}
+.fonctionnement .fonctionnement__step .fonctionnement__todo {
+  font-size: 14pt;
+}
+.fonctionnement .fonctionnement__step--row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.listeResto {
+  background-color: #F6F6F6;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.listeResto .listeResto--responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.listeResto .listeResto__bloc {
+  width: 100%;
+  border-radius: 0.94rem;
+  background-color: white;
+  text-decoration: none;
+  position: relative;
+}
+.listeResto .listeResto__nouveau {
+  position: absolute;
+  top: 5%;
+  left: 80%;
+  background-color: #99E2D0;
+  padding: 5px 8px;
+  border-radius: 3px;
+  color: #008766;
+  font-size: 10pt;
+}
+.listeResto .listeResto__location {
+  font-weight: 200;
+}
+.listeResto .listeResto__img {
+  object-fit: cover;
+  width: 100%;
+  height: 15rem;
+  border-radius: 0.94rem 0.94rem 0 0;
+}
+.listeResto .listeResto__foot--space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.listeResto .listeResto__text--gap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  color: black;
+}
+
+footer {
+  background-color: #353535;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+footer .footer--responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+footer .footer__linkLogo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+footer .footer__logo {
+  width: 8rem;
+  height: 3rem;
+}
+footer .footer__link {
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+}
+footer .footer__link--bold {
+  font-weight: bold;
+}
+footer .footer__linkPartnerLogo {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.nouveau--hide{
+  display: none;
+}
+
+/********************* ANIMATIONS *********************/
+/* HOVER CTA */
+.exploration__CTA, .menu__button {
+  opacity: 1;
+  transition: all 350ms;
+}
+.exploration__CTA:hover, .menu__button:hover {
+  opacity: 0.85;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+/* COEUR */
+.heart--animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/images/icon/heart.png);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  transition: background-image 200ms;
+}
+.heart--animation:hover {
+  background-image: url(/assets/images/icon/heart-purple.png);
+}
+
+/* LOADER */
+@keyframes loading {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes loading-end {
+  0% {
+    transform: scale(1);
+  }
+  99% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.loader--animation {
+  position: absolute;
+  width: 100%;
+  height: 250vh;
+  background: white;
+  z-index: 5;
+  transform: scale(1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15rem;
+  gap: 2rem;
+  animation: loading-end 2.5s linear forwards;
+  /* HIDE ANIMATION */
+  display: none;
+}
+.loader--animation .loader__title {
+  font-size: 22pt;
+}
+.loader--animation .loader--animation--bar {
+  width: 50%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #F6F6F6;
+  position: relative;
+}
+.loader--animation .loader--animation--progression {
+  transform: scaleX(0);
+  border-radius: 9px;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: #9356DC;
+  transform-origin: 0% 50%;
+  animation: loading 2s ease-in-out forwards;
+}
+
+/********************* MEDIA QUERIES *********************/
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    padding: 4rem 10%;
+  }
+  .fonctionnement .fonctionnement__step--row {
+    display: flex;
+    flex-direction: row;
+  }
+  .listeResto {
+    padding: 4rem 10%;
+  }
+  .listeResto .listeResto--responsive {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+  footer {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  footer .footer--responsive {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 3rem;
+  }
+  footer .footer__linkLogo {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 3rem;
+  }
+  .menu {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .menu .menu__header {
+    justify-content: center;
+    gap: 3%;
+  }
+}
+/* Responsive animation */
+@media screen and (max-width: 767px) {
+  .menu__plat--entree .menu__icon--anim, .menu__plat--plat .menu__icon--anim, .menu__plat--dessert .menu__icon--anim {
+    width: 12%;
+    left: 88%;
+  }
+  .menu__plat--entree:hover .menu__prix, .menu__plat--plat:hover .menu__prix, .menu__plat--dessert:hover .menu__prix {
+    margin-right: 12%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+    </style>
 </head>
 <body>
 
@@ -76,54 +412,8 @@
     <section class="listeResto" id="listeResto">
         <h1 class="listeResto__title">Restaurants</h1>
 
-        <div class="listeResto--responsive">
-            <a class="listeResto__bloc" href="restaurants/la-palette-du-gout.html">
-                <img src="../assets/images/restaurants/jay-wennington.jpg" alt="restaurant la palette du goût" class="listeResto__img">
-                <p class="listeResto__nouveau">Nouveau</p>
-                <div class="listeResto__foot--space-between">
-                <div class="listeResto__text--gap">
-                    <h3 class="listeResto__name">La palette du goût</h3>
-                    <p class="listeResto__location">Ménilmontant</p>
-                </div>
-                <div class="heart--animation"></div>
-                </div>
-            </a>
-
-            <a class="listeResto__bloc" href="restaurants/la-note-enchantee.html">
-                <img src="../assets/images/restaurants/restau-unknow.jpg" alt="restaurant la note enchantée" class="listeResto__img">
-                <p class="listeResto__nouveau">Nouveau</p>
-                <div class="listeResto__foot--space-between">
-                <div class="listeResto__text--gap">
-                    <h3 class="listeResto__name">La note enchantée</h3>
-                    <p class="listeResto__location">Charonne</p>
-                </div>
-                <div class="heart--animation"></div>
-                </div>
-            </a>
-
-            <a class="listeResto__bloc" href="restaurants/a-la-francaise.html">
-                <img src="../assets/images/restaurants/toa-heftiba.jpg" alt="restaurant à la française" class="listeResto__img">
-                <div class="listeResto__foot--space-between">
-                <div class="listeResto__text--gap">
-                    <h3 class="listeResto__name">À la française</h3>
-                    <p class="listeResto__location">Cité Rouge</p>
-                </div>
-                <div class="heart--animation"></div>
-                </div>
-            </a>
-
-            <a class="listeResto__bloc" href="restaurants/le-delice-des-sens.html">
-                <img src="../assets/images/restaurants/louis-hansel-shotsoflouis.jpg" alt="restaurant le délice des sens" class="listeResto__img">
-                <div class="listeResto__foot--space-between">
-                <div class="listeResto__text--gap">
-                    <h3 class="listeResto__name">Le délice des sens</h3>
-                    <p class="listeResto__location">Folie-Méricourt</p>
-                </div>
-                <div class="heart--animation"></div>
-                </div>
-            </a>
-        </div>
-
+        {$TEMP-RESTO$}
+        
     </section>
 
 <!-- Footer -->

@@ -1,0 +1,30 @@
+[
+    {
+        "id": 0,
+        "name": "La palette du goût",
+        "location": "Ménilmontant",
+        "image": "../assets/images/restaurants/jay-wennington.jpg",
+        "new": true
+    },
+    {
+        "id": 1,
+        "name": "La note enchantée",
+        "location": "Charonne",
+        "image": "../assets/images/restaurants/restau-unknow.jpg",
+        "new": true
+    },
+    {
+        "id": 2,
+        "name": "À la française",
+        "location": "Cité Rouge",
+        "image": "../assets/images/restaurants/toa-heftiba.jpg",
+        "new": false
+    },
+    {
+        "id": 3,
+        "name": "Le délice des sens",
+        "location": "Folie-Méricourt",
+        "image": "../assets/images/restaurants/louis-hansel-shotsoflouis.jpg",
+        "new": false
+    }
+]
