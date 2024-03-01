@@ -357,45 +357,6 @@ footer .footer__linkPartnerLogo {
   box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
-/* CARTE AJOUTER */
-.menu__plat--entree .menu__prix, .menu__plat--plat .menu__prix, .menu__plat--dessert .menu__prix {
-  position: relative;
-  transition: all 500ms cubic-bezier(0.07, 0.83, 0.73, 0.99);
-}
-.menu__plat--entree .menu__icon, .menu__plat--plat .menu__icon, .menu__plat--dessert .menu__icon {
-  width: 1.7rem;
-  height: 1.7rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  transform: scale(0);
-  transition: transform 300ms;
-}
-.menu__plat--entree .menu__icon--anim, .menu__plat--plat .menu__icon--anim, .menu__plat--dessert .menu__icon--anim {
-  width: 7%;
-  height: 100%;
-  background-color: #99E2D0;
-  border-radius: 0 0.94019rem 0.94019rem 0;
-  transform-origin: 100% 50%;
-  transition: transform 350ms;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 93%;
-  top: 0%;
-  transform: scaleX(0);
-}
-.menu__plat--entree:hover .menu__icon, .menu__plat--plat:hover .menu__icon, .menu__plat--dessert:hover .menu__icon {
-  transform: scale(1);
-}
-.menu__plat--entree:hover .menu__prix, .menu__plat--plat:hover .menu__prix, .menu__plat--dessert:hover .menu__prix {
-  margin-right: 7%;
-}
-.menu__plat--entree:hover .menu__icon--anim, .menu__plat--plat:hover .menu__icon--anim, .menu__plat--dessert:hover .menu__icon--anim {
-  transform: scaleX(1);
-}
-
 /* COEUR */
 .heart--animation {
   display: flex;
@@ -491,6 +452,55 @@ footer .footer__linkPartnerLogo {
   transform: scaleX(0);
   transform-origin: 0% 50%;
   animation: plats 1300ms ease-out forwards;
+}
+
+/* CARTE AJOUTER */
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menu__plat--entree .menu__prix, .menu__plat--plat .menu__prix, .menu__plat--dessert .menu__prix {
+  position: relative;
+  transition: all 500ms cubic-bezier(0.07, 0.83, 0.73, 0.99);
+}
+.menu__plat--entree .menu__icon, .menu__plat--plat .menu__icon, .menu__plat--dessert .menu__icon {
+  width: 1.7rem;
+  height: 1.7rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: scale(0);
+  transition: transform 300ms;
+}
+.menu__plat--entree .menu__icon--anim, .menu__plat--plat .menu__icon--anim, .menu__plat--dessert .menu__icon--anim {
+  width: 7%;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0 0.94019rem 0.94019rem 0;
+  transform-origin: 100% 50%;
+  transition: transform 350ms;
+  animation: opacity 3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 93%;
+  top: 0%;
+  transform: scaleX(0);
+  opacity: 1;
+}
+.menu__plat--entree:hover .menu__icon, .menu__plat--plat:hover .menu__icon, .menu__plat--dessert:hover .menu__icon {
+  transform: scale(1);
+}
+.menu__plat--entree:hover .menu__prix, .menu__plat--plat:hover .menu__prix, .menu__plat--dessert:hover .menu__prix {
+  margin-right: 7%;
+}
+.menu__plat--entree:hover .menu__icon--anim, .menu__plat--plat:hover .menu__icon--anim, .menu__plat--dessert:hover .menu__icon--anim {
+  transform: scaleX(1);
 }
 
 /********************* MEDIA QUERIES *********************/
