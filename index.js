@@ -19,6 +19,8 @@ const server = http.createServer((req, res) => {
         const cardResto = dataObj.map(el => replaceTemplate(tempResto, el)).join('')
         const accueil = tempAccueil.replace('{$TEMP_RESTO$}', cardResto)
         res.end(accueil)
+    } else if (pathName === '/restaurant') {
+        res.end('resto page')
     }
     else {
         res.writeHead(404)
